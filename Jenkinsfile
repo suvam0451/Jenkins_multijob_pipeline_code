@@ -14,6 +14,7 @@ pipeline {
         }
         stage('Test') {
             steps {
+		input message: 'Are you sure to proceed to next step? ', ok: 'Yes'
                sh "mvn test"
             }
         }
